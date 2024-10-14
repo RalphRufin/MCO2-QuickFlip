@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_decks"
+        android:title="Decks"
+        android:icon="@drawable/quickflipdecksicon" />
+
+    <item
+        android:id="@+id/nav_cardbrowse"
+        android:title="Card Browser"
+        android:icon="@drawable/quickflipsearchwhiteicon" />
+
+    <item
+        android:id="@+id/nav_leaderboard"
+        android:title="Leaderboard"
+        android:icon="@drawable/quickflipleaderboardicon" />
+
+    <group android:id="@+id/divider_group">
+    </group>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+        android:icon="@drawable/quickflipsettingsicon" />
+
+    <item
+        android:id="@+id/nav_help"
+        android:title="Help"
+        android:icon="@drawable/quickfliphelpicon" />
+
+    <item
+        android:id="@+id/nav_support"
+        android:title="Support QuickFlip"
+        android:icon="@drawable/quickflipsupporticon" />
+
+</menu>
