@@ -27,7 +27,8 @@ class MainActivity : BaseActivity() {
         }
 
         storeButton.setOnClickListener {
-            onStoreButtonClick()
+            val intent = Intent(this, StoreActivity::class.java)
+            startActivity(intent)
         }
 
         testButton.setOnClickListener {
