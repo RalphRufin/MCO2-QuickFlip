@@ -19,7 +19,8 @@ class InitloadActivity : AppCompatActivity() {
 
 
         getStartedButton.setOnClickListener {
-
+        val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -27,5 +28,7 @@ class InitloadActivity : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+
     }
 }

@@ -2,21 +2,25 @@ package com.mobdeve.s20.group7.mco2
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class LoginActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        setContentView(R.layout.activity_signup)
 
-    val SignUpClickText = findViewById<TextView>(R.id.signUpText)
+        val LoginClickText = findViewById<TextView>(R.id.alreadyHaveAccountText)
 
-        SignUpClickText.setOnClickListener {
-            val intent = Intent(this, SignupActivity::class.java)
+        LoginClickText.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
     }
+
+
+
+
 }
