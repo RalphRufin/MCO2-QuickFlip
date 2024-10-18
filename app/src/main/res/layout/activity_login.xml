@@ -42,7 +42,8 @@
         android:inputType="textEmailAddress"
         android:layout_marginTop="20dp"
         android:padding="10dp"
-        android:background="@color/light_gray"/>
+        android:background="@color/light_gray"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -52,7 +53,8 @@
         android:inputType="textPassword"
         android:layout_marginTop="10dp"
         android:padding="10dp"
-        android:background="@color/light_gray"/>
+        android:background="@color/light_gray"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/forgotPasswordText"

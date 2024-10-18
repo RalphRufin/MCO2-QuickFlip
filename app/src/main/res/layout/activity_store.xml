@@ -15,14 +15,16 @@
         <!-- Header Element -->
 
         <!-- Toolbar -->
+
         <ImageView
             android:id="@+id/headerElement"
             android:layout_width="match_parent"
             android:layout_height="550dp"
-            android:src="@drawable/quickflipheaderwaveelement"
+            android:contentDescription="Header Background"
             android:scaleType="fitXY"
+            android:src="@drawable/quickflipheaderwaveelement"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Header Background" />
+            tools:layout_editor_absoluteX="34dp" />
 
         <include
             android:id="@+id/toolbar"

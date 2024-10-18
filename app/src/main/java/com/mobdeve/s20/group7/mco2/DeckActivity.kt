@@ -1,5 +1,6 @@
 package com.mobdeve.s20.group7.mco2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
@@ -9,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
-
 class DeckActivity : BaseActivity() {
 
     private lateinit var fabMain: FloatingActionButton
@@ -63,7 +63,13 @@ class DeckActivity : BaseActivity() {
 
     private fun setupRecyclerView() {
         val deckItems = createSampleDeckItems() // Replace with actual data source
-        val adapter = DeckAdapter(deckItems)
+        val adapter = DeckAdapter(deckItems) { deckItem ->
+            // On deck click, open SpeedTActivity with the selected deck
+            val intent = Intent(this, SpeedTActivity::class.java)
+            intent.putExtra("deckTitle", deckItem.getDeckTitle())
+            intent.putExtra("deckCards", ArrayList(deckItem.cardItems))  // Passing cards to the next activity
+            startActivity(intent)
+        }
         rvDecks.layoutManager = GridLayoutManager(this, 3)
         rvDecks.adapter = adapter
     }

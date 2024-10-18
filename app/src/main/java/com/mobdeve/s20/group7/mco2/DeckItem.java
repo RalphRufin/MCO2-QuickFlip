@@ -5,8 +5,8 @@ import java.util.List;
 
 public class DeckItem {
 
-    // Attributes for Deck Image, Title, and List of CardItems
-    private String deckImage; // URL or file path to the deck image
+
+    private String deckImage;
     private String deckTitle;
     private List<CardItem> cardItems;
 
