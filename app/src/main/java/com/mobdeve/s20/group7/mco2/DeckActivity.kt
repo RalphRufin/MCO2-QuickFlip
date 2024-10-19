@@ -1,12 +1,15 @@
 package com.mobdeve.s20.group7.mco2
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import android.widget.TextView
-
+import androidx.recyclerview.widget.GridLayoutManager
 class DeckActivity : BaseActivity() {
 
     private lateinit var fabMain: FloatingActionButton
@@ -16,6 +19,7 @@ class DeckActivity : BaseActivity() {
     private lateinit var tvFindDeck: TextView
     private lateinit var tvImportDeck: TextView
     private lateinit var tvShareDeck: TextView
+    private lateinit var rvDecks: RecyclerView
 
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_open_anim) }
     private val rotateClose: Animation by lazy { AnimationUtils.loadAnimation(this, R.anim.rotate_close_anim) }
@@ -36,6 +40,7 @@ class DeckActivity : BaseActivity() {
         tvFindDeck = findViewById(R.id.tvFindDeck)
         tvImportDeck = findViewById(R.id.tvImportDeck)
         tvShareDeck = findViewById(R.id.tvShareDeck)
+        rvDecks = findViewById(R.id.rvDecks)
 
         fabMain.setOnClickListener {
             onAddButtonClicked()
@@ -52,6 +57,30 @@ class DeckActivity : BaseActivity() {
         fabShareDeck.setOnClickListener {
             // TODO: Implement share deck functionality
         }
+
+        setupRecyclerView()
+    }
+
+    private fun setupRecyclerView() {
+        val deckItems = createSampleDeckItems() // Replace with actual data source
+        val adapter = DeckAdapter(deckItems) { deckItem ->
+            // On deck click, open SpeedTActivity with the selected deck
+            val intent = Intent(this, SpeedTActivity::class.java)
+            intent.putExtra("deckTitle", deckItem.getDeckTitle())
+            intent.putExtra("deckCards", ArrayList(deckItem.cardItems))  // Passing cards to the next activity
+            startActivity(intent)
+        }
+        rvDecks.layoutManager = GridLayoutManager(this, 3)
+        rvDecks.adapter = adapter
+    }
+
+    private fun createSampleDeckItems(): List<DeckItem> {
+        // This is just for demonstration. Replace with your actual data source.
+        return listOf(
+            DeckItem("@drawable/quickflipdeckicon", "Deck 1"),
+            DeckItem("@drawable/quickflipdeckicon", "Deck 2"),
+            DeckItem("@drawable/quickflipdeckicon", "Deck 3")
+        )
     }
 
     private fun onAddButtonClicked() {
