@@ -14,11 +14,11 @@
         <ImageView
             android:id="@+id/headerElement"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="550dp"
             android:src="@drawable/quickflipheaderwaveelement"
             android:scaleType="fitXY"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Header Background" />
+            android:contentDescription="@string/header_background" />
 
         <include
             android:id="@+id/toolbar"
@@ -31,24 +31,28 @@
             android:id="@+id/tvMyDecks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="My Decks"
+            android:text="@string/my_decks"
             android:textColor="#053574"
             android:textStyle="bold"
             android:textSize="24sp"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             app:layout_constraintTop_toBottomOf="@id/toolbar"
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDecks"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/tvMyDecks"
-            app:layout_constraintBottom_toTopOf="@id/footerElement"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#EFF5F9"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="16dp" />
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabMain"
@@ -56,6 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:contentDescription="@string/add_deck"
             android:src="@drawable/quickflipaddicon"
             app:backgroundTint="#4285F4"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -66,6 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:contentDescription="@string/find_deck"
             android:src="@drawable/quickflipfinddeckicon"
             app:backgroundTint="#4285F4"
             android:visibility="gone"
@@ -78,6 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:contentDescription="@string/import_deck"
             android:src="@drawable/quickflipdownloadicon"
             app:backgroundTint="#4285F4"
             android:visibility="gone"
@@ -90,6 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:contentDescription="@string/share_deck"
             android:src="@drawable/quickflipshareicon"
             app:backgroundTint="#4285F4"
             android:visibility="gone"
@@ -103,7 +111,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:padding="8dp"
-            android:text="Find Deck"
+            android:text="@string/find_deck"
+            android:textColor="@color/white"
             android:background="#053574"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/fabFindDeck"
@@ -116,7 +125,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:padding="8dp"
-            android:text="Import Deck"
+            android:text="@string/import_deck"
+            android:textColor="@color/white"
             android:background="#053574"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/fabImportDeck"
@@ -130,7 +140,7 @@
             android:src="@drawable/quickflipfooterwaveelement"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:contentDescription="Footer Background" />
+            android:contentDescription="@string/footer_background" />
 
         <TextView
             android:id="@+id/tvShareDeck"
@@ -138,7 +148,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:padding="8dp"
-            android:text="Share Deck"
+            android:textColor="@color/white"
+            android:text="@string/share_deck"
             android:background="#053574"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@id/fabShareDeck"

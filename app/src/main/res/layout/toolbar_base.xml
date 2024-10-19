@@ -16,7 +16,7 @@
         android:scaleType="centerCrop"
         android:layout_marginTop="20dp"
         android:layout_gravity="start|center_vertical"
-        android:contentDescription="Drawer" />
+        android:contentDescription="@string/drawer" />
 
     <ImageButton
         android:id="@+id/logoImageView"
@@ -27,6 +27,6 @@
         android:layout_gravity="center"
         android:scaleType="centerCrop"
         android:background="@android:color/white"
-        android:contentDescription="QuickFlip Logo" />
+        android:contentDescription="@string/quickflip_logo" />
 
 </androidx.appcompat.widget.Toolbar>

@@ -21,8 +21,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".DeckActivity" />
+        <activity android:name=".StoreActivity" />
         <activity android:name=".LoginActivity"/>
         <activity android:name=".InitloadActivity"/>
+        <activity android:name=".LeaderboardActivity" />
+        <activity android:name=".SettingsActivity" />
     </application>
 
 </manifest>
