@@ -62,14 +62,13 @@ class DeckActivity : BaseActivity() {
     }
 
     private fun setupRecyclerView() {
-        val deckItems = createSampleDeckItems() // Replace with actual data source
+        val deckItems = createSampleDeckItems()
         val adapter = DeckAdapter(deckItems)
         rvDecks.layoutManager = GridLayoutManager(this, 3)
         rvDecks.adapter = adapter
     }
 
     private fun createSampleDeckItems(): List<DeckItem> {
-        // This is just for demonstration. Replace with your actual data source.
         return listOf(
             DeckItem("@drawable/quickflipdeckicon", "Deck 1"),
             DeckItem("@drawable/quickflipdeckicon", "Deck 2"),

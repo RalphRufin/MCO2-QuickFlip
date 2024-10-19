@@ -6,8 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
@@ -19,7 +18,7 @@
         android:src="@drawable/quickflipheaderwaveelement"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="Header Background" />
+        android:contentDescription="@string/header_background" />
 
     <include
         android:id="@+id/toolbar"
@@ -56,16 +55,16 @@
                 android:scaleType="fitCenter"
                 android:padding="24dp"
                 android:layout_margin="8dp"
-                android:contentDescription="Deck" />
+                android:contentDescription="@string/deck" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Deck"
+                android:text="@string/deck"
                 android:textColor="#053574"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -83,16 +82,16 @@
             android:scaleType="fitCenter"
             android:padding="24dp"
             android:layout_margin="8dp"
-            android:contentDescription="Browse" />
+            android:contentDescription="@string/browse" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Browse"
+                android:text="@string/browse"
                 android:textColor="#053574"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -110,16 +109,16 @@
             android:scaleType="fitCenter"
             android:padding="24dp"
             android:layout_margin="8dp"
-            android:contentDescription="Store" />
+            android:contentDescription="@string/store" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Store"
+                android:text="@string/store"
                 android:textColor="#053574"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -137,15 +136,15 @@
             android:scaleType="fitCenter"
             android:padding="24dp"
             android:layout_margin="8dp"
-            android:contentDescription="Test" />
+            android:contentDescription="@string/test" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test"
+                android:text="@string/test"
                 android:textColor="#053574"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
-                android:textSize="22dp" />
+                android:textSize="22sp" />
         </LinearLayout>
 
     </GridLayout>
@@ -157,7 +156,7 @@
         android:src="@drawable/quickflipfooterwaveelement"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:contentDescription="Footer Background" />
+        android:contentDescription="@string/footer_background" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView

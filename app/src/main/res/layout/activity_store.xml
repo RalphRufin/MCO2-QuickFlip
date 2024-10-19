@@ -12,9 +12,6 @@
         android:layout_height="match_parent"
         android:background="@android:color/white">
 
-        <!-- Header Element -->
-
-        <!-- Toolbar -->
         <ImageView
             android:id="@+id/headerElement"
             android:layout_width="match_parent"
@@ -22,7 +19,7 @@
             android:src="@drawable/quickflipheaderwaveelement"
             android:scaleType="fitXY"
             app:layout_constraintTop_toTopOf="parent"
-            android:contentDescription="Header Background" />
+            android:contentDescription="@string/header_background" />
 
         <include
             android:id="@+id/toolbar"
@@ -31,12 +28,11 @@
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Points Display -->
         <TextView
             android:id="@+id/tvPoints"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Points: 180"
+            android:text="@string/points_180"
             android:textColor="@android:color/white"
             android:background="@drawable/rounded_button_background"
             android:padding="8dp"
@@ -47,12 +43,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar"/>
 
-        <!-- Store Title -->
         <TextView
             android:id="@+id/tvStoreTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Store"
+            android:text="@string/store"
             android:textColor="#053574"
             android:textStyle="bold"
             android:textSize="24sp"
@@ -61,7 +56,6 @@
             app:layout_constraintTop_toBottomOf="@id/toolbar"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <!-- Store Items in Grid Layout -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvStoreItems"
             android:layout_width="330dp"
@@ -75,7 +69,6 @@
             android:paddingStart="30dp"
             android:paddingEnd="16dp" />
 
-        <!-- Footer Element -->
         <ImageView
             android:id="@+id/footerElement"
             android:layout_width="match_parent"
@@ -83,11 +76,10 @@
             android:src="@drawable/quickflipfooterwaveelement"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:contentDescription="Footer Background" />
+            android:contentDescription="@string/footer_background" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Navigation Drawer -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/navigation_menu"
         android:layout_width="wrap_content"

@@ -1,9 +1,9 @@
 package com.mobdeve.s20.group7.mco2;
 
 public class StoreItem {
-    private String name;
-    private int pointsCost;
-    private int iconResource;
+    private final String name;
+    private final int pointsCost;
+    private final int iconResource;
 
     public StoreItem(String name, int pointsCost, int iconResource) {
         this.name = name;

@@ -1,5 +1,6 @@
 package com.mobdeve.s20.group7.mco2;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +31,7 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.StoreViewHol
         return new StoreViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull StoreViewHolder holder, int position) {
         StoreItem currentItem = storeItems.get(position);

@@ -2,20 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_decks"
-        android:title="Decks" />
+        android:title="@string/decks" />
     <item
         android:id="@+id/nav_cardbrowse"
-        android:title="Card Browser" />
+        android:title="@string/card_browser" />
     <item
         android:id="@+id/nav_leaderboard"
-        android:title="Leaderboard" />
+        android:title="@string/leaderboard" />
     <item
         android:id="@+id/nav_settings"
-        android:title="Settings" />
+        android:title="@string/settings" />
     <item
         android:id="@+id/nav_help"
-        android:title="Help" />
+        android:title="@string/help" />
     <item
         android:id="@+id/nav_support"
-        android:title="Support QuickFlip" />
+        android:title="@string/support_quickflip" />
 </menu>

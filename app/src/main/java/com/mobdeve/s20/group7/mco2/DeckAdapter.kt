@@ -9,18 +9,15 @@ import androidx.recyclerview.widget.RecyclerView
 
 class DeckAdapter(private val deckItems: List<DeckItem>) : RecyclerView.Adapter<DeckAdapter.DeckViewHolder>() {
 
-    // ViewHolder to hold each deck item view
     inner class DeckViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val deckImageView: ImageView = itemView.findViewById(R.id.ivDeckImage)
         private val deckTitleView: TextView = itemView.findViewById(R.id.tvDeckTitle)
 
         fun bind(deckItem: DeckItem) {
-            // Assuming deckImage is a drawable resource reference (e.g., R.drawable.quickflipdeckicon)
             deckImageView.setImageResource(getDrawableResource(deckItem.getDeckImage()))
             deckTitleView.text = deckItem.getDeckTitle()
         }
 
-        // Helper function to resolve drawable resource IDs
         private fun getDrawableResource(imagePath: String): Int {
             return itemView.context.resources.getIdentifier(imagePath.substringAfter("@drawable/"), "drawable", itemView.context.packageName)
         }
